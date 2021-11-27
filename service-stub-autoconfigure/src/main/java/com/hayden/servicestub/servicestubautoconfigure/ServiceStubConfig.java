@@ -1,18 +1,16 @@
 package com.hayden.servicestub.servicestubautoconfigure;
 
-import com.hayden.servicestublibrarytwo.ServiceStubbed;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import com.hayden.servicestublibrarytwo.ServiceStubWiring;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConditionalOnClass(ServiceStubbed.class)
 public class ServiceStubConfig {
 
     @Bean
-    ServiceStubbed serviceStubbed()
+    ServiceStubWiring serviceStubbed()
     {
-        return new ServiceStubbed();
+        return new ServiceStubWiring();
     }
 
 }
